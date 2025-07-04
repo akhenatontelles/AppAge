@@ -14,7 +14,7 @@
 
         <!-- Atividade principal -->
         <activity
-            android:name="com.seuapp.MainActivity"
+            android:name=".MainActivity"
             android:exported="true"
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"

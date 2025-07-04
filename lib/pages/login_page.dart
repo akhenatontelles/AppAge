@@ -21,7 +21,7 @@ class _LoginPageState extends State<LoginPage>
   // Controllers
   final _cpfController = TextEditingController();
   final _passwordController = TextEditingController();
-  final _apiService = ApiService('https://api.testelab.me/login.php');
+  final _apiService = ApiService('https://api.testelab.me');
 
   // State variables
   bool _isLoading = false;
