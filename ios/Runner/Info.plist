@@ -45,5 +45,15 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Este app precisa de acesso à sua localização para registrar visitas e outras funcionalidades baseadas em geolocalização.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Este app precisa de acesso à sua localização para registrar visitas e outras funcionalidades baseadas em geolocalização, mesmo em segundo plano.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Este app precisa de acesso à sua localização para registrar visitas e outras funcionalidades baseadas em geolocalização, mesmo em segundo plano.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Este app precisa de acesso à sua galeria para permitir o upload de imagens e documentos.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Este app precisa de acesso à sua câmera para capturar fotos para upload de imagens e documentos.</string>
 </dict>
 </plist>

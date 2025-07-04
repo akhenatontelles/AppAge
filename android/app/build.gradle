@@ -4,6 +4,24 @@ plugins {
     id "dev.flutter.flutter-gradle-plugin"
 }
 
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
+if (flutterVersionCode == null) {
+    flutterVersionCode = '1'
+}
+
+def flutterVersionName = localProperties.getProperty('flutter.versionName')
+if (flutterVersionName == null) {
+    flutterVersionName = '1.0'
+}
+
 def keystoreProperties = new Properties()
 def keystorePropertiesFile = rootProject.file('key.properties')
 if (keystorePropertiesFile.exists()) {
@@ -27,8 +45,8 @@ android {
         applicationId "br.com.agebrasilia.minhaapp"
         minSdkVersion 21
         targetSdkVersion 34
-        versionCode 6
-        versionName "6.0"
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
 
         // Garantir que os binários nativos (.so) sejam gerados corretamente
         ndk {
